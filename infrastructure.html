@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Global School</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Top Navigation Bar */
+        .top-navbar {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        /* Header */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #f4f4f4;
+        }
+
+        .top-bar img {
+            height: 60px;
+        }
+
+        .top-bar h1 {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .admission-button {
+            background: #ff6600;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .contact-number {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #222;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .navbar ul li {
+            position: relative;
+        }
+
+        .navbar ul li a {
+            color: rgb(7, 6, 6);
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        /* Dropdown */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            z-index: 100;
+        }
+
+        .dropdown-menu a {
+            color: black;
+            padding: 10px;
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            background: #ecbaba;
+        }
+
+        .navbar ul li:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Mobile Toggle Button */
+        .toggle-button {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            padding: 10px;
+            background: #222;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .toggle-button {
+                display: block;
+            }
+
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                background: #333;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar ul.active {
+                display: flex;
+            }
+
+            .navbar ul li {
+                width: 100%;
+                position: relative;
+            }
+
+            .dropdown-menu {
+                position: relative;
+                display: none;
+                background: #444;
+            }
+
+            .navbar ul li.show-dropdown .dropdown-menu {
+                display: block;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <div class="top-navbar">
+        📍 Location: New Delhi, India | ✉️ Email: contact@example.com
+    </div>
+
+    <!-- Header -->
+    <div class="top-bar">
+        <div>
+            <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Logo">
+            <h1>J.D GLOBAL SCHOOL</h1>
+        </div>
+        <div>
+            <a href="#admission" class="admission-button">Admission</a>
+            <div class="contact-number">📞 +91 12345 67890</div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header>
+        <div class="toggle-button" onclick="toggleMenu()">☰ MENU</div>
+        <nav class="navbar">
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="admission.html">ADMISSION</a></li>
+                <li onclick="toggleDropdown(this)">
+                    <a href="#">ACADEMIC ZONE ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="activities.html">ACTIVITIES</a>
+                        <a href="tc.html">TC ENQUIRY</a>
+                    </div>
+                </li>
+                <li onclick="toggleDropdown(this)">
+                    <a href="#">SESSION INFORMATION ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="timing.html">SCHOOL TIMING</a>
+                        <a href="feeragulation.html">FEE REGULATION</a>
+                        <a href="ruleforcode.html">RULE OF CODE AND CONDUCT</a>
+                    </div>
+                </li>
+                <li onclick="toggleDropdown(this)">
+                    <a href="#">INFRASTRUCTURE ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="transport.html">TRANSPORT FACILITY</a>
+                        <a href="laboratory.html">LABORATORY</a>
+                        <a href="library.html">LIBRARY</a>
+                        <a href="sportground.html">SPORTS GROUND</a>
+                    </div>
+                </li>
+                <li onclick="toggleDropdown(this)">
+                    <a href="#">OUR TEACHERS ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="#">About Principal</a>
+                        <a href="teachers.html">About Faculty</a>
+                    </div>
+                </li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 J.D Global School. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-list").classList.toggle("active");
+        }
+
+        function toggleDropdown(element) {
+            element.classList.toggle("show-dropdown");
+        }
+    </script>
+
+</body>
+</html>

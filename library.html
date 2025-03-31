@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="style.css">
+ <style>
+     body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            color: #fff;
+        }
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 1000px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .book-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .book {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background 0.3s;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .book:hover {
+            transform: scale(1.1);
+            background: #ff6b6b;
+            color: white;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        .slide-in {
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            to { transform: translateY(0); opacity: 1; }
+        }
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+ </style>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="top-navbar">
+    <div class="navbar-content">
+        <div class="location">📍 Location: New Delhi, India</div>
+        <div class="email">✉️ Email: contact@example.com</div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="left-section">
+        <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Logo" width="auto" height="auto" />
+        <h1>J.D GLOBAL SCHOOL</h1>
+    </div>
+    <div class="right-section">
+        <a href="#admission" class="admission-button">Admission</a>
+        <div class="contact-number">📞 +91 12345 67890</div>
+    </div>
+</div>
+
+<header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="toggle-button" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="admission.html">ADMISSION</a></li>
+            <li><a href="#">ACADEMIC ZONE</a>
+                <div class="dropdown-menu">
+                    <a href="activities.html">ACTIVITIES</a>
+                    <a href="tc.html">TC ENQUIRY</a>
+                </div>
+            </li>
+            <li><a href="#">SESSION INFORMATION</a>
+                <div class="dropdown-menu">
+                    <a href="timing.html">SCHOOL TIMING</a>
+                    <a href="feeragulation.html">FEE REGULATION</a>
+                    <a href="ruleforcode.html">RULE OF CODE AND CONDUCT</a>
+                </div>
+            </li>
+            <li><a href="#">INFRASTRUCTURE</a>
+                <div class="dropdown-menu">
+                    <a href="transport.html">TRANSPORT FACILITY</a>
+                    <a href="laboratory.html">LABORATORY</a>
+                    <a href="library.html">LIBRARY</a>
+                    <a href="sportground.html">SPORTS GROUND</a>
+                </div>
+            </li>
+            <li><a href="#">OUR TEACHERS</a>
+                <div class="dropdown-menu">
+                    <a href="#">About Principal</a>
+                    <a href="teachers.html">About Faculty</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--library detail-->
+<section id="books" class="fade-in">
+    <h2>Our Collection</h2>
+    <div class="book-container">
+        <div class="book">📖 Book 1</div>
+        <div class="book">📚 Book 2</div>
+        <div class="book">📖 Book 3</div>
+        <div class="book">📚 Book 4</div>
+    </div>
+</section>
+<section id="about" class="slide-in">
+    <h2>About the Library</h2>
+    <p>Welcome to the JD Global School Library! We have a vast collection of books across various subjects.</p>
+</section>
+<section id="services" class="fade-in">
+    <h2>Library Services</h2>
+    <p>We provide book lending, digital resources and reading rooms.</p>
+</section>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sections = document.querySelectorAll(".fade-in, .slide-in");
+        
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+
+
+ <!-- Footer Section -->
+ <footer class="footer">
+   <div class="footer-container">
+       <!-- Logo Section -->
+       <div class="footer-logo">
+           <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Z.K. Office Solution Logo"
+               class="logo">
+           <p>J.D global school english medium (A Co-Educational group of school)</p>
+       </div>
+
+
+
+       <!-- Follow Me Section -->
+       <div class="footer-follow">
+           <h3>OUR LINKS</h3>
+           <ul>
+               <li><a href="#">HOME</a>
+                   
+               </li>
+               <li><a href="#">ABOUT US</a></li>
+               <li><a href="#">GALLER</a></li>
+               <li><a href="#">CONTACT US</a></li>
+               
+           </ul>
+
+       </div>
+       <!-- Location Section -->
+       <div class="footer-location">
+           <h3>Our Location</h3>
+           <p>226,Sai Enclave,nandgram, opp km Residency,Raj nagar Extn.,Ghaziabad 201003</p>
+           <p>Email: jdglobal.school@gmail.com</p>
+           <p>Phone: 0120-2981089,8882229658</p>
+       </div>
+   </div>
+</footer>
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>

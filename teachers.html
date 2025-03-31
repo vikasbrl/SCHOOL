@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+    }
+    .teachers-section {
+        padding: 60px 30px;
+        max-width: 1200px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        color: #222;
+        transform: translateY(50px);
+        opacity: 0;
+        animation: slideIn 1s forwards ease-in-out;
+    }
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #e74c3c;
+        text-transform: uppercase;
+        animation: fadeIn 2s ease-in-out;
+    }
+    .teachers-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    .teacher-card {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #2c3e50;
+        transition: transform 0.5s, background 0.5s, box-shadow 0.5s;
+        cursor: pointer;
+        width: 280px;
+        text-align: center;
+    }
+    .teacher-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        border: 4px solid white;
+    }
+    .teacher-card:hover {
+        transform: scale(1.1);
+        background: linear-gradient(135deg, #ff512f, #dd2476);
+        color: white;
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes slideIn {
+        from { transform: translateY(50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    @media (max-width: 768px) {
+        .teachers-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+
+
+  <!-- Top Navigation Bar -->
+  <div class="top-navbar">
+    <div class="navbar-content">
+        <div class="location">📍 Location: New Delhi, India</div>
+        <div class="email">✉️ Email: contact@example.com</div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="left-section">
+        <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Logo" width="auto" height="auto" />
+        <h1>J.D GLOBAL SCHOOL</h1>
+    </div>
+    <div class="right-section">
+        <a href="#admission" class="admission-button">Admission</a>
+        <div class="contact-number">📞 +91 12345 67890</div>
+    </div>
+</div>
+
+<header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="toggle-button" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="admission.html">ADMISSION</a></li>
+            <li><a href="#">ACADEMIC ZONE</a>
+                <div class="dropdown-menu">
+                    <a href="activities.html">ACTIVITIES</a>
+                    <a href="tc.html">TC ENQUIRY</a>
+                </div>
+            </li>
+            <li><a href="#">SESSION INFORMATION</a>
+                <div class="dropdown-menu">
+                    <a href="timing.html">SCHOOL TIMING</a>
+                    <a href="feeragulation.html">FEE REGULATION</a>
+                    <a href="ruleforcode.html">RULE OF CODE AND CONDUCT</a>
+                </div>
+            </li>
+            <li><a href="#">INFRASTRUCTURE</a>
+                <div class="dropdown-menu">
+                    <a href="transport.html">TRANSPORT FACILITY</a>
+                    <a href="laboratory.html">LABORATORY</a>
+                    <a href="library.html">LIBRARY</a>
+                    <a href="sportground.html">SPORTS GROUND</a>
+                </div>
+            </li>
+            <li><a href="#">OUR TEACHERS</a>
+                <div class="dropdown-menu">
+                    <a href="#">About Principal</a>
+                    <a href="teachers.html">About Faculty</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--About our teacher-->
+<section class="teachers-section">
+    <h2>Meet Our Teachers</h2>
+    <p class="description">At JD Global School, our teachers are dedicated to nurturing students with knowledge and wisdom. Here are some of our esteemed faculty members and their messages.</p>
+    <div class="teachers-container">
+        <div class="teacher-card">
+            <img src="https://t4.ftcdn.net/jpg/01/99/36/81/360_F_199368197_CXhzovd2cgXhK3SR4xjUKNhTer8j5I87.jpg" alt="Teacher 1">
+            <h3>Mr. Rahul Sharma</h3>
+            <p>"Education is not just about learning facts, but about understanding and applying knowledge wisely."</p>
+        </div>
+        <div class="teacher-card">
+            <img src="https://t3.ftcdn.net/jpg/02/65/18/30/360_F_265183063_Qhws5HebqXncNjlIW3WknSwDIjq5FCiV.jpg" alt="Teacher 2">
+            <h3>Ms. Priya Verma</h3>
+            <p>"Every student has the potential to achieve greatness; our role is to guide them towards it."</p>
+        </div>
+        <div class="teacher-card">
+            <img src="https://cdn8.dissolve.com/p/D2115_185_376/D2115_185_376_1200.jpg" alt="Teacher 3">
+            <h3>Dr. Anil Mehta</h3>
+            <p>"Learning is a lifelong journey. The more we explore, the brighter our future becomes."</p>
+        </div>
+        <div class="teacher-card">
+            <img src="https://t4.ftcdn.net/jpg/01/99/36/81/360_F_199368197_CXhzovd2cgXhK3SR4xjUKNhTer8j5I87.jpg" alt="Teacher 1">
+            <h3>Mr. Rahul Sharma</h3>
+            <p>"Education is not just about learning facts, but about understanding and applying knowledge wisely."</p>
+        </div>
+        <div class="teacher-card">
+            <img src="https://t3.ftcdn.net/jpg/02/65/18/30/360_F_265183063_Qhws5HebqXncNjlIW3WknSwDIjq5FCiV.jpg" alt="Teacher 2">
+            <h3>Ms. Priya Verma</h3>
+            <p>"Every student has the potential to achieve greatness; our role is to guide them towards it."</p>
+        </div>
+        <div class="teacher-card">
+            <img src="https://cdn8.dissolve.com/p/D2115_185_376/D2115_185_376_1200.jpg" alt="Teacher 3">
+            <h3>Dr. Anil Mehta</h3>
+            <p>"Learning is a lifelong journey. The more we explore, the brighter our future becomes."</p>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Footer Section -->
+ <footer class="footer">
+   <div class="footer-container">
+       <!-- Logo Section -->
+       <div class="footer-logo">
+           <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Z.K. Office Solution Logo"
+               class="logo">
+           <p>J.D global school english medium (A Co-Educational group of school)</p>
+       </div>
+
+
+
+       <!-- Follow Me Section -->
+       <div class="footer-follow">
+           <h3>OUR LINKS</h3>
+           <ul>
+               <li><a href="#">HOME</a>
+                   
+               </li>
+               <li><a href="#">ABOUT US</a></li>
+               <li><a href="#">GALLER</a></li>
+               <li><a href="#">CONTACT US</a></li>
+               
+           </ul>
+
+       </div>
+       <!-- Location Section -->
+       <div class="footer-location">
+           <h3>Our Location</h3>
+           <p>226,Sai Enclave,nandgram, opp km Residency,Raj nagar Extn.,Ghaziabad 201003</p>
+           <p>Email: jdglobal.school@gmail.com</p>
+           <p>Phone: 0120-2981089,8882229658</p>
+       </div>
+   </div>
+</footer>
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="style.css">
+ <style>
+    .container {
+            max-width: 100%;
+            margin: 50px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 30px;
+            color: #ff5722;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .lab-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .info {
+            flex: 1 1 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: slideInLeft 1s ease;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .info h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #4a90e2;
+        }
+
+        .info p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .image-section {
+            flex: 1 1 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slideInRight 1s ease;
+        }
+
+        @keyframes slideInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .image-section img {
+            width: 90%;
+            height: 500px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease;
+        }
+
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .features {
+            margin-top: 40px;
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            color: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .features h3 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffeb3b;
+        }
+
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features ul li {
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .features ul li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            .lab-section {
+                flex-direction: column;
+            }
+
+            .info, .image-section {
+                flex: 1 1 100%;
+            }
+
+            .info {
+                margin-bottom: 20px;
+            }
+        }
+ </style>
+</head>
+<body>
+   <!-- Top Navigation Bar -->
+   <div class="top-navbar">
+    <div class="navbar-content">
+        <div class="location">📍 Location: New Delhi, India</div>
+        <div class="email">✉️ Email: contact@example.com</div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="left-section">
+        <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Logo" width="auto" height="auto" />
+        <h1>J.D GLOBAL SCHOOL</h1>
+    </div>
+    <div class="right-section">
+        <a href="#admission" class="admission-button">Admission</a>
+        <div class="contact-number">📞 +91 12345 67890</div>
+    </div>
+</div>
+
+<header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="toggle-button" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="admission.html">ADMISSION</a></li>
+            <li><a href="#">ACADEMIC ZONE</a>
+                <div class="dropdown-menu">
+                    <a href="activities.html">ACTIVITIES</a>
+                    <a href="tc.html">TC ENQUIRY</a>
+                </div>
+            </li>
+            <li><a href="#">SESSION INFORMATION</a>
+                <div class="dropdown-menu">
+                    <a href="timing.html">SCHOOL TIMING</a>
+                    <a href="feeragulation.html">FEE REGULATION</a>
+                    <a href="ruleforcode.html">RULE OF CODE AND CONDUCT</a>
+                </div>
+            </li>
+            <li><a href="#">INFRASTRUCTURE</a>
+                <div class="dropdown-menu">
+                    <a href="transport.html">TRANSPORT FACILITY</a>
+                    <a href="laboratory.html">LABORATORY</a>
+                    <a href="library.html">LIBRARY</a>
+                    <a href="sportground.html">SPORTS GROUND</a>
+                </div>
+            </li>
+            <li><a href="#">OUR TEACHERS</a>
+                <div class="dropdown-menu">
+                    <a href="#">About Principal</a>
+                    <a href="teachers.html">About Faculty</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+
+ <!--laboratory-->
+ <h1>Laboratory Facility</h1>
+ <div class="container">
+  
+
+    <div class="lab-section">
+        <div class="info">
+            <h2>State-of-the-Art Laboratories</h2>
+            <p>
+                JD Global School provides well-equipped laboratories for Physics, Chemistry, Biology, and Computer Science to ensure practical learning. These labs are designed to meet the highest safety and quality standards.
+            </p>
+        </div>
+
+        <div class="image-section">
+            <img src="https://t3.ftcdn.net/jpg/06/98/56/64/360_F_698566412_ciWJpysNThig0YBwbcLdH0WRs0DZukdP.jpg" alt="Laboratory">
+        </div>
+    </div>
+
+    <div class="features">
+        <h3>Features of Our Laboratories:</h3>
+        <ul>
+            <li>Modern equipment and tools for practical experiments.</li>
+            <li>Spacious and well-ventilated environments.</li>
+            <li>Dedicated lab assistants and supervisors.</li>
+            <li>Emphasis on safety protocols and measures.</li>
+            <li>Hands-on learning experiences for students.</li>
+        </ul>
+    </div>
+</div>
+ <!-- Footer Section -->
+ <footer class="footer">
+   <div class="footer-container">
+       <!-- Logo Section -->
+       <div class="footer-logo">
+           <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Z.K. Office Solution Logo"
+               class="logo">
+           <p>J.D global school english medium (A Co-Educational group of school)</p>
+       </div>
+
+
+
+       <!-- Follow Me Section -->
+       <div class="footer-follow">
+           <h3>OUR LINKS</h3>
+           <ul>
+               <li><a href="#">HOME</a>
+                   
+               </li>
+               <li><a href="#">ABOUT US</a></li>
+               <li><a href="#">GALLER</a></li>
+               <li><a href="#">CONTACT US</a></li>
+               
+           </ul>
+
+       </div>
+       <!-- Location Section -->
+       <div class="footer-location">
+           <h3>Our Location</h3>
+           <p>226,Sai Enclave,nandgram, opp km Residency,Raj nagar Extn.,Ghaziabad 201003</p>
+           <p>Email: jdglobal.school@gmail.com</p>
+           <p>Phone: 0120-2981089,8882229658</p>
+       </div>
+   </div>
+</footer>
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>

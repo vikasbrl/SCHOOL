@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+
+            margin: auto;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .control:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .control {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+        }
+
+        /*about section*/
+
+        .section {
+            display: flex;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 20px;
+
+        }
+
+        .left {
+
+            flex: 0 0 60%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+        }
+
+        .left h2 {
+            margin-left: 20px;
+            color: red;
+        }
+
+        .left h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+
+        .left p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-left: 20px;
+        }
+
+        .right {
+            flex: 0 0 40%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            position: relative;
+
+
+        }
+
+        .right img {
+            width: 100%;
+            max-width: 550px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+            }
+
+            .right img {
+                width: 60%;
+            }
+        }
+
+        /*about*/
+        .about {
+            text-align: center;
+            align-items: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 50px;
+            text-shadow: 10%;
+
+        }
+
+        .section1 {
+            display: flex;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 20px;
+
+        }
+
+        .left1 {
+
+            flex: 0 0 70%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+        }
+
+        .left1 h2 {
+            margin-left: 20px;
+            color: red;
+        }
+
+        .left1 h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+
+        .left1 p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-left: 20px;
+        }
+
+        .right1 {
+            flex: 0 0 30%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            position: relative;
+
+
+        }
+
+        .right1 img {
+            width: 50%;
+            max-width: 550px;
+            aspect-ratio: 1 / 1;
+            border-radius: 0%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        }
+
+        @media (max-width: 768px) {
+            .section1 {
+                flex-direction: column;
+            }
+
+            .right1 img {
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="top-navbar">
+    <div class="navbar-content">
+        <div class="location">📍 Location: New Delhi, India</div>
+        <div class="email">✉️ Email: contact@example.com</div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="left-section">
+        <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Logo" width="auto" height="auto" />
+        <h1>J.D GLOBAL SCHOOL</h1>
+    </div>
+    <div class="right-section">
+        <a href="#admission" class="admission-button">Admission</a>
+        <div class="contact-number">📞 +91 12345 67890</div>
+    </div>
+</div>
+
+<header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="toggle-button" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="admission.html">ADMISSION</a></li>
+            <li><a href="#">ACADEMIC ZONE</a>
+                <div class="dropdown-menu">
+                    <a href="activities.html">ACTIVITIES</a>
+                    <a href="tc.html">TC ENQUIRY</a>
+                </div>
+            </li>
+            <li><a href="#">SESSION INFORMATION</a>
+                <div class="dropdown-menu">
+                    <a href="timing.html">SCHOOL TIMING</a>
+                    <a href="feeragulation.html">FEE REGULATION</a>
+                    <a href="ruleforcode.html">RULE OF CODE AND CONDUCT</a>
+                </div>
+            </li>
+            <li><a href="#">INFRASTRUCTURE</a>
+                <div class="dropdown-menu">
+                    <a href="transport.html">TRANSPORT FACILITY</a>
+                    <a href="laboratory.html">LABORATORY</a>
+                    <a href="library.html">LIBRARY</a>
+                    <a href="sportground.html">SPORTS GROUND</a>
+                </div>
+            </li>
+            <li><a href="#">OUR TEACHERS</a>
+                <div class="dropdown-menu">
+                    <a href="#">About Principal</a>
+                    <a href="teachers.html">About Faculty</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="https://www.jdacademy.co.in/iimg/aboutus_banner.jpg" alt="Slide 1"></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="left">
+            <h1>Principal Message</h1>
+            <p>Dear Parent J D Academy's philosophy of education has always been value-based and it is this vision of J
+                D Academy that has seen the school emerge as a pioneer in providing quality, experimental and
+                research-based education which has placed the school on the national map. And today, I am honoured to
+                have the opportunity to lead a school with such a rich tradition of education! I want to thank you all
+                for the support and trust shown in me in this journey thus far. I strongly feel that education is a
+                harmonious blend of academic acumen and creative effervescence and as the Principal of the school, my
+                motto is to empower our students to grow as strong and reflective individuals with discerning minds,
+                prepared to make a mark in the global village.Along with the experienced cohort of educators, I will
+                continue my work to maintain the legacy of success established by the school by building strong
+                relationships with parents, students. Together as a school community, we will build on the traditions of
+                the past and meet the challenges of the future in innovative and exciting ways. Had the situation been
+                normal, I would have been blessed to be in your midst. As Principal, my door is always open and I
+                welcome your inputs. I feel privileged and humbled and assure that I shall tirelessly continue to work
+                towards maintaining the novelty of the profession and do my very best in shaping the future of the young
+                minds. Be healthy, stay safe. Principal, J D Academy Ghaziabad</p>
+            <br>
+            <h2>Santosh Rani</h2>
+            <p>Principal, J D Academy Ghaziabad</p>
+        </div>
+        <div class="right">
+            <img src="https://www.jdacademy.co.in/iimg/aboutUs.jpg" alt="Placeholder Image">
+        </div>
+    </div>
+    <div class="section">
+        <div class="right">
+            <img src="https://www.jdacademy.co.in/iimg/aboutUs2.jpg" alt="Placeholder Image">
+        </div>
+        <div class="left">
+            <h1>Vice Principal Message</h1>
+            <p>Certainly! Here’s a message from a vice principal to the school: Dear Students, Staff, and Parents, I
+                hope this message finds you all in good spirits and excited for the upcoming school year. As the vice
+                principal, it is my privilege to welcome both new and returning members of our school community. Our
+                school is a place where academic excellence meets holistic development. We strive to create an
+                environment where every student feels valued, supported, and encouraged to reach their full potential.
+                This year, we are focusing on enhancing our curriculum, promoting a culture of respect and inclusion,
+                and supporting the mental and emotional well-being of our students. I encourage students to take
+                advantage of the diverse opportunities available, whether in academics, sports, arts, or community
+                service. Remember, education is not just about acquiring knowledge but also about building character,
+                developing critical thinking, and fostering a lifelong love for learning. To our dedicated staff, thank
+                you for your unwavering commitment and passion. Your hard work and creativity are the pillars of our
+                school's success. Let’s continue to work collaboratively to inspire and empower our students. Parents,
+                your partnership is invaluable to us. We look forward to your continued support and engagement as we
+                navigate this journey together. Your involvement plays a crucial role in the academic and personal
+                growth of our students. Together, let’s make this school year a memorable and impactful one. My door is
+                always open, and I welcome your ideas, feedback, and conversations. Here’s to a fantastic year ahead!
+            </p>
+            <br>
+            <h2>Mrs. Bimla Bhatt</h2>
+            <p>Vice Principal, J D Academy Ghaziabad</p>
+        </div>
+    </div>
+    <h1 class="about">ABOUT US</h1>
+    <div class="section1">
+        <div class="right1">
+            <img src="https://www.jdacademy.co.in/iimg/Aboutus_school.png" alt="Placeholder Image">
+        </div>
+        <div class="left1">
+            <h1>Our School</h1>
+            <p>
+                Welcome to JD ACADEMY, a premier institution dedicated to nurturing young minds and fostering academic
+                excellence. Affiliated with the Central Board of Secondary Education (CBSE), our school is committed to
+                providing a holistic education that empowers students to become lifelong learners and responsible global
+                citizens.
+            </p>
+            <br>
+            <p>At JD ACADEMY we believe in the transformative power of education. Our comprehensive curriculum, aligned
+                with CBSE guidelines, is designed to cultivate critical thinking, creativity, and problem-solving skills
+                among our students. From core subjects like Mathematics, Science, Social Science, and English to a wide
+                array of co-curricular activities, we offer a well-rounded educational experience that caters to the
+                diverse interests and talents of our students</p>
+            <br>
+        </div>
+    </div>
+
+
+    <div class="section1">
+
+        <div class="left1">
+            <h1>Vision And Mission</h1>
+            <p>
+                "To be a leading institution of academic excellence and holistic development, inspiring students to
+                reach their full potential and become compassionate, innovative, and responsible global citizens."
+                Provide a rigorous and comprehensive curriculum aligned with CBSE standards, fostering critical
+                thinking, creativity, and problem-solving skills among students. Cultivate a supportive and inclusive
+                learning environment that values diversity, encourages collaboration, and promotes mutual respect and
+                understanding. Empower students with the knowledge, skills, and values necessary to navigate a rapidly
+                changing world with confidence and integrity. Foster a culture of continuous improvement and innovation,
+                leveraging technology and best practices in education to enhance teaching and learning outcomes.
+            </p>
+            <br>
+            <p>Encourage holistic development through a range of co-curricular activities, including sports, arts,
+                community service, and leadership initiatives, nurturing well-rounded individuals who are equipped to
+                excel in all aspects of life. Forge strong partnerships with parents, alumni, and the community to
+                actively engage stakeholders in the educational journey and promote a sense of ownership and pride in
+                the school's achievements. Uphold the highest standards of professionalism, ethics, and accountability
+                in all aspects of school governance and operations, ensuring transparency, fairness, and sustainability
+                in our endeavors.</p>
+            <br>
+        </div>
+        <div class="right1">
+            <img src="https://www.jdacademy.co.in/iimg/Aboutus_target.png" alt="Placeholder Image">
+        </div>
+    </div>
+
+    <div class="section1">
+        <div class="right1">
+            <img src="https://www.jdacademy.co.in/iimg/aboutUs-Aims.png" alt="Placeholder Image">
+        </div>
+        <div class="left1">
+            <h1>Aims and objectives</h1>
+            <p>
+                Providing a comprehensive education that prepares students for higher education and professional
+                pursuits. Fostering intellectual, emotional, social, and physical development of students. Encouraging
+                critical thinking, problem-solving skills, and creativity. Promoting values such as integrity,
+                responsibility, respect, and empathy. Offering a diverse curriculum that includes academics, arts,
+                sports, and co-curricular activities. Facilitating holistic development by integrating academics with
+                life skills and practical knowledge. Preparing students to adapt to a rapidly changing world and become
+                responsible global citizens.
+            </p>
+            <br>
+            <p>Providing opportunities for personal growth, leadership development, and community engagement. Supporting
+                students' individual interests, talents, and aspirations through personalized learning approaches.
+                Ensuring a safe, inclusive, and supportive learning environment conducive to academic success and
+                personal well-being.</p>
+            <br>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Z.K. Office Solution Logo" class="logo">
+                <p>J.D global school english medium (A Co-Educational group of school)</p>
+            </div>
+
+
+
+            <!-- Follow Me Section -->
+            <div class="footer-follow">
+                <h3>OUR LINKS</h3>
+                <ul>
+                    <li><a href="#">HOME</a>
+
+                    </li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">GALLER</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+
+                </ul>
+
+            </div>
+            <!-- Location Section -->
+            <div class="footer-location">
+                <h3>Our Location</h3>
+                <p>226,Sai Enclave,nandgram, opp km Residency,Raj nagar Extn.,Ghaziabad 201003</p>
+                <p>Email: jdglobal.school@gmail.com</p>
+                <p>Phone: 0120-2981089,8882229658</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .background-section {
+            position: relative;
+            width: 100%;
+            height: fit-content;
+            background: url('https://jdglobalschool.in/images/about/gal11.jpeg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-size: cover;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .background-section {
+                width: 100%;
+                height: fit-content;
+            }
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .text-box {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 1.6;
+        }
+
+        .text-box h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .text-box ol {
+            margin-left: 30px;
+        }
+
+        .text-box p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            padding-left: 30px;
+        }
+        .admission-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-align: center;
+      transition: background-color 0.3s;
+      width: 200px;
+    
+    }
+
+    .admission-button:hover {
+      background-color: #218838;
+    }
+
+        .form-box {
+            flex: 1;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .form-box form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .form-box form input,
+        .form-box form textarea,
+        .form-box form button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-box form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .form-box form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 200px;
+        }
+
+        .form-box form button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+            }
+
+            .text-box,
+            .form-box {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="top-navbar">
+    <div class="navbar-content">
+        <div class="location">📍 Location: New Delhi, India</div>
+        <div class="email">✉️ Email: contact@example.com</div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="left-section">
+        <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Logo" width="auto" height="auto" />
+        <h1>J.D GLOBAL SCHOOL</h1>
+    </div>
+    <div class="right-section">
+        <a href="#admission" class="admission-button">Admission</a>
+        <div class="contact-number">📞 +91 12345 67890</div>
+    </div>
+</div>
+
+<header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="toggle-button" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="admission.html">ADMISSION</a></li>
+            <li><a href="#">ACADEMIC ZONE</a>
+                <div class="dropdown-menu">
+                    <a href="activities.html">ACTIVITIES</a>
+                    <a href="tc.html">TC ENQUIRY</a>
+                </div>
+            </li>
+            <li><a href="#">SESSION INFORMATION</a>
+                <div class="dropdown-menu">
+                    <a href="timing.html">SCHOOL TIMING</a>
+                    <a href="feeragulation.html">FEE REGULATION</a>
+                    <a href="ruleforcode.html">RULE OF CODE AND CONDUCT</a>
+                </div>
+            </li>
+            <li><a href="#">INFRASTRUCTURE</a>
+                <div class="dropdown-menu">
+                    <a href="transport.html">TRANSPORT FACILITY</a>
+                    <a href="laboratory.html">LABORATORY</a>
+                    <a href="library.html">LIBRARY</a>
+                    <a href="sportground.html">SPORTS GROUND</a>
+                </div>
+            </li>
+            <li><a href="#">OUR TEACHERS</a>
+                <div class="dropdown-menu">
+                    <a href="#">About Principal</a>
+                    <a href="teachers.html">About Faculty</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div class="background-section">
+    </div>
+    <div class="section">
+        <div class="text-box">
+            <h1>JD global school</h1>
+            <h2>Admission is a 2 step process as follows:</h2>
+            <h3>Step 1- Procuring Prospectus :</h3><br>
+            <p>It can be collected on payment from the school administrative office on all working days between 8.00
+                a.m. – 2.00 p.m.</p>
+                <h3>Step 2- Registration :</h3><br>
+                <ol type="1">
+                    <li>Duly filled registration form</li>
+                    <li>Registration Fee;</li>
+                    <li>Transfer Certificate;</li>
+                    <li> Photocopy of report card of last two years; and</li>
+                    <li> Date of Birth Certificate issued by the Municipal Corporation;</li>
+                    <li>Download Admission Form Here</li>
+                </ol>
+                <a href="images/Admission Form.pdf" class="admission-button">Admission Form</a>
+        </div>
+        <div class="form-box">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone Number" required>
+        <input type="text" placeholder="Subject" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Z.K. Office Solution Logo" class="logo">
+                <p>J.D global school english medium (A Co-Educational group of school)</p>
+            </div>
+
+
+
+            <!-- Follow Me Section -->
+            <div class="footer-follow">
+                <h3>OUR LINKS</h3>
+                <ul>
+                    <li><a href="#">HOME</a>
+
+                    </li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">GALLER</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+
+                </ul>
+
+            </div>
+            <!-- Location Section -->
+            <div class="footer-location">
+                <h3>Our Location</h3>
+                <p>226,Sai Enclave,nandgram, opp km Residency,Raj nagar Extn.,Ghaziabad 201003</p>
+                <p>Email: jdglobal.school@gmail.com</p>
+                <p>Phone: 0120-2981089,8882229658</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>

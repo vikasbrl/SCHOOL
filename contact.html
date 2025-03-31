@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: linear-gradient(135deg, #1b1b2f, #3a506b, #5bc0be);
+        color: white;
+        
+    }
+    .contact-container {
+       
+        max-width: 100%;
+        margin-top:50px ;
+        margin-bottom:50px ;
+        padding: 60px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        color: #333;
+        overflow: hidden;
+        position: relative;
+    }
+    .contact-left, .contact-right {
+        flex: 1;
+        padding: 40px;
+        position: relative;
+    }
+    .contact-left {
+        border-right: 3px solid #5bc0be;
+    }
+    h2 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        color: #080808;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: transform 0.3s;
+    }
+    h2:hover {
+        transform: scale(1.1);
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 14px;
+        border: 2px solid #5bc0be;
+        border-radius: 12px;
+        font-size: 1rem;
+        outline: none;
+        transition: transform 0.3s, box-shadow 0.3s;
+        background: #f0f0f0;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+        transform: scale(1.05);
+        box-shadow: 0 0 12px rgba(91, 192, 190, 0.7);
+    }
+    .contact-form button {
+        background: #5bc0be;
+        color: white;
+        padding: 14px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+    }
+    .contact-form button:hover {
+        background: #3a506b;
+        transform: scale(1.1);
+    }
+    .contact-right p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        position: relative;
+        font-weight: bold;
+    }
+    .contact-right p::before {
+        
+        font-size: 1.5rem;
+        color: #5bc0be;
+        margin-right: 10px;
+    }
+    @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+        }
+        .contact-left {
+            border-right: none;
+            border-bottom: 3px solid #5bc0be;
+        }
+    }
+</style>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Top Navigation Bar -->
+   <div class="top-navbar">
+    <div class="navbar-content">
+        <div class="location">📍 Location: New Delhi, India</div>
+        <div class="email">✉️ Email: contact@example.com</div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="left-section">
+        <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Logo" width="auto" height="auto" />
+        <h1>J.D GLOBAL SCHOOL</h1>
+    </div>
+    <div class="right-section">
+        <a href="#admission" class="admission-button">Admission</a>
+        <div class="contact-number">📞 +91 12345 67890</div>
+    </div>
+</div>
+
+<header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="toggle-button" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="admission.html">ADMISSION</a></li>
+            <li><a href="#">ACADEMIC ZONE</a>
+                <div class="dropdown-menu">
+                    <a href="activities.html">ACTIVITIES</a>
+                    <a href="tc.html">TC ENQUIRY</a>
+                </div>
+            </li>
+            <li><a href="#">SESSION INFORMATION</a>
+                <div class="dropdown-menu">
+                    <a href="timing.html">SCHOOL TIMING</a>
+                    <a href="feeragulation.html">FEE REGULATION</a>
+                    <a href="ruleforcode.html">RULE OF CODE AND CONDUCT</a>
+                </div>
+            </li>
+            <li><a href="#">INFRASTRUCTURE</a>
+                <div class="dropdown-menu">
+                    <a href="transport.html">TRANSPORT FACILITY</a>
+                    <a href="laboratory.html">LABORATORY</a>
+                    <a href="library.html">LIBRARY</a>
+                    <a href="sportground.html">SPORTS GROUND</a>
+                </div>
+            </li>
+            <li><a href="#">OUR TEACHERS</a>
+                <div class="dropdown-menu">
+                    <a href="#">About Principal</a>
+                    <a href="teachers.html">About Faculty</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+ <!--contact section-->
+ <div class="contact-container">
+    <div class="contact-left">
+        <h2>Keep in Touch</h2>
+        <p>We would love to hear from you! Fill out the form below to get in touch with us.</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <div class="contact-right">
+        <h2>Our Address</h2>
+        <p><strong>JD Global School</strong></p>
+        <p>226,Sai Enclave,nandgram,opp.km residency,Raj Nagar Extn., Ghaziabad-201003</p>
+        <p>Email: jdglobalschool@gmail.com</p>
+        <p>Phone: +91 8882229658</p>
+    </div>
+</div>
+ <!-- Footer Section -->
+ <footer class="footer">
+   <div class="footer-container">
+       <!-- Logo Section -->
+       <div class="footer-logo">
+           <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Z.K. Office Solution Logo"
+               class="logo">
+           <p>J.D global school english medium (A Co-Educational group of school)</p>
+       </div>
+
+
+
+       <!-- Follow Me Section -->
+       <div class="footer-follow">
+           <h3>OUR LINKS</h3>
+           <ul>
+               <li><a href="#">HOME</a>
+                   
+               </li>
+               <li><a href="#">ABOUT US</a></li>
+               <li><a href="#">GALLER</a></li>
+               <li><a href="#">CONTACT US</a></li>
+               
+           </ul>
+
+       </div>
+       <!-- Location Section -->
+       <div class="footer-location">
+           <h3>Our Location</h3>
+           <p>226,Sai Enclave,nandgram, opp km Residency,Raj nagar Extn.,Ghaziabad 201003</p>
+           <p>Email: jdglobal.school@gmail.com</p>
+           <p>Phone: 0120-2981089,8882229658</p>
+       </div>
+   </div>
+</footer>
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+    }
+     .gallery-section {
+        padding: 60px 30px;
+        max-width: 1200px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        color: #222;
+        margin-bottom: 50px;
+    }
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #e74c3c;
+        text-transform: uppercase;
+    }
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    .gallery-item {
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .gallery-item img {
+        width: 100%;
+        display: block;
+        border-radius: 15px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+    .gallery-item::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .gallery-item:hover::after {
+        opacity: 1;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .gallery-item {
+        animation: fadeIn 1s ease-in-out;
+    }
+    @media (max-width: 768px) {
+        .gallery-container {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+    }
+</style>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="top-navbar">
+    <div class="navbar-content">
+        <div class="location">📍 Location: New Delhi, India</div>
+        <div class="email">✉️ Email: contact@example.com</div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="left-section">
+        <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Logo" width="auto" height="auto" />
+        <h1>J.D GLOBAL SCHOOL</h1>
+    </div>
+    <div class="right-section">
+        <a href="#admission" class="admission-button">Admission</a>
+        <div class="contact-number">📞 +91 12345 67890</div>
+    </div>
+</div>
+
+<header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="toggle-button" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="admission.html">ADMISSION</a></li>
+            <li><a href="#">ACADEMIC ZONE</a>
+                <div class="dropdown-menu">
+                    <a href="activities.html">ACTIVITIES</a>
+                    <a href="tc.html">TC ENQUIRY</a>
+                </div>
+            </li>
+            <li><a href="#">SESSION INFORMATION</a>
+                <div class="dropdown-menu">
+                    <a href="timing.html">SCHOOL TIMING</a>
+                    <a href="feeragulation.html">FEE REGULATION</a>
+                    <a href="ruleforcode.html">RULE OF CODE AND CONDUCT</a>
+                </div>
+            </li>
+            <li><a href="#">INFRASTRUCTURE</a>
+                <div class="dropdown-menu">
+                    <a href="transport.html">TRANSPORT FACILITY</a>
+                    <a href="laboratory.html">LABORATORY</a>
+                    <a href="library.html">LIBRARY</a>
+                    <a href="sportground.html">SPORTS GROUND</a>
+                </div>
+            </li>
+            <li><a href="#">OUR TEACHERS</a>
+                <div class="dropdown-menu">
+                    <a href="#">About Principal</a>
+                    <a href="teachers.html">About Faculty</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--gallery section-->
+<section class="gallery-section">
+    <h2>Our School Gallery</h2>
+    <p>Explore moments from JD Global School captured in our gallery.</p>
+    <div class="gallery-container">
+        <div class="gallery-item"><img src="https://content3.jdmagicbox.com/v2/comp/ghaziabad/n8/011pxx11.xx11.200628205217.p5n8/catalogue/jd-global-school-nandgram-ghaziabad-schools-AzLDIAG89A.jpg" alt="Gallery Image 1"height="270px"></div>
+        <div class="gallery-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsaCL5cjAtq1wLF1r6VZCgz1ymDAyH_5KcCA&s" alt="Gallery Image 2"></div>
+        <div class="gallery-item"><img src="https://jdglobalschool.in/images/slider/about.jpg" alt="Gallery Image 3"height="270px"></div>
+        <div class="gallery-item"><img src="https://jdglobalschool.in/images/gallery/1.jpg" alt="Gallery Image 4"height="270px"></div>
+        <div class="gallery-item"><img src="https://jdglobalschool.in/images/gallery/11.jpg" alt="Gallery Image 5"height="270px"></div>
+        <div class="gallery-item"><img src="https://jdglobalschool.in/images/gallery/4.jpg" alt="Gallery Image 6"height="270px"></div>
+        <div class="gallery-item"><img src="https://jdglobalschool.in/images/all-icon/ctg-2.png" alt="Gallery Image 5"height="270px"></div>
+        <div class="gallery-item"><img src="https://jdglobalschool.in/images/gallery/gal10.jpeg" alt="Gallery Image 6"height="270px"></div>
+    </div>
+</section>
+ <!-- Footer Section -->
+ <footer class="footer">
+   <div class="footer-container">
+       <!-- Logo Section -->
+       <div class="footer-logo">
+           <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Z.K. Office Solution Logo"
+               class="logo">
+           <p>J.D global school english medium (A Co-Educational group of school)</p>
+       </div>
+
+
+
+       <!-- Follow Me Section -->
+       <div class="footer-follow">
+           <h3>OUR LINKS</h3>
+           <ul>
+               <li><a href="#">HOME</a>
+                   
+               </li>
+               <li><a href="#">ABOUT US</a></li>
+               <li><a href="#">GALLER</a></li>
+               <li><a href="#">CONTACT US</a></li>
+               
+           </ul>
+
+       </div>
+       <!-- Location Section -->
+       <div class="footer-location">
+           <h3>Our Location</h3>
+           <p>226,Sai Enclave,nandgram, opp km Residency,Raj nagar Extn.,Ghaziabad 201003</p>
+           <p>Email: jdglobal.school@gmail.com</p>
+           <p>Phone: 0120-2981089,8882229658</p>
+       </div>
+   </div>
+</footer>
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>

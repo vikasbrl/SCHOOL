@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .background-section {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            background: url('https://jdglobalschool.in/images/page-banner-7.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-size: cover;
+        }
+        .activities1{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 80px;
+            font-weight: bolder;
+            color: rgb(237, 90, 90);
+        }
+
+        @media (max-width: 768px) {
+
+            .background-section {
+                width: 100%;
+                height: 60vh;
+            }
+        }
+        .container {
+            max-width: 95%px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #2a5298;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .rule-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 15px;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transform: scale(0.98);
+            transition: transform 0.3s;
+        }
+
+        .rule-section:hover {
+            transform: scale(1);
+        }
+
+        .rule-section h2 {
+            font-size: 2em;
+            color: #fff;
+            margin-bottom: 15px;
+            text-transform: capitalize;
+            animation: popIn 1.2s ease;
+        }
+
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .details {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #f1f1f1;
+        }
+
+        .button-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .button-section button {
+            font-size: 1.3em;
+            padding: 15px 40px;
+            color: #fff;
+            background: #2a5298;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            animation: bounceIn 2s infinite alternate;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .button-section button:hover {
+            background: #1e3c72;
+            transform: scale(1.1);
+        }
+
+        .note {
+            margin-top: 30px;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 20px;
+            background: #e3f2fd;
+            border: 2px solid #2a5298;
+            color: #1e3c72;
+            border-radius: 10px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .rule-section h2 {
+                font-size: 1.6em;
+            }
+
+            .details {
+                font-size: 1em;
+            }
+
+            .button-section button {
+                font-size: 1.1em;
+                padding: 10px 25px;
+            }
+        }
+        .h11{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="top-navbar">
+    <div class="navbar-content">
+        <div class="location">📍 Location: New Delhi, India</div>
+        <div class="email">✉️ Email: contact@example.com</div>
+    </div>
+</div>
+
+<div class="top-bar">
+    <div class="left-section">
+        <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Logo" width="auto" height="auto" />
+        <h1>J.D GLOBAL SCHOOL</h1>
+    </div>
+    <div class="right-section">
+        <a href="#admission" class="admission-button">Admission</a>
+        <div class="contact-number">📞 +91 12345 67890</div>
+    </div>
+</div>
+
+<header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="toggle-button" onclick="toggleMenu()">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="admission.html">ADMISSION</a></li>
+            <li><a href="#">ACADEMIC ZONE</a>
+                <div class="dropdown-menu">
+                    <a href="activities.html">ACTIVITIES</a>
+                    <a href="tc.html">TC ENQUIRY</a>
+                </div>
+            </li>
+            <li><a href="#">SESSION INFORMATION</a>
+                <div class="dropdown-menu">
+                    <a href="timing.html">SCHOOL TIMING</a>
+                    <a href="feeragulation.html">FEE REGULATION</a>
+                    <a href="ruleforcode.html">RULE OF CODE AND CONDUCT</a>
+                </div>
+            </li>
+            <li><a href="#">INFRASTRUCTURE</a>
+                <div class="dropdown-menu">
+                    <a href="transport.html">TRANSPORT FACILITY</a>
+                    <a href="laboratory.html">LABORATORY</a>
+                    <a href="library.html">LIBRARY</a>
+                    <a href="sportground.html">SPORTS GROUND</a>
+                </div>
+            </li>
+            <li><a href="#">OUR TEACHERS</a>
+                <div class="dropdown-menu">
+                    <a href="#">About Principal</a>
+                    <a href="teachers.html">About Faculty</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div class="background-section">
+        <h1 class="activities1">RULE OF CODE AND CONDUCT</h1>
+    </div>
+    <!--activities-->
+    <h1 class="h11">RULE OF CODE AND CONDUCT</h1>
+    <div class="container">
+
+        <div class="rule-section">
+            <h2>Respect for All</h2>
+            <div class="details">
+                <p>All students must treat their peers, teachers, and staff members with respect. Bullying, discrimination, or harassment of any kind will not be tolerated.</p>
+            </div>
+        </div>
+
+        <div class="rule-section">
+            <h2>Attendance and Punctuality</h2>
+            <div class="details">
+                <p>Students are expected to attend school regularly and arrive on time. Parents must inform the school in case of absence or late arrival.</p>
+            </div>
+        </div>
+
+        <div class="rule-section">
+            <h2>Academic Integrity</h2>
+            <div class="details">
+                <p>Students must maintain honesty in all academic activities. Cheating, plagiarism, or any form of dishonest behavior will result in strict consequences.</p>
+            </div>
+        </div>
+
+        <div class="rule-section">
+            <h2>Dress Code</h2>
+            <div class="details">
+                <p>All students are required to wear the prescribed school uniform and maintain a neat appearance. Casual or inappropriate attire is not permitted.</p>
+            </div>
+        </div>
+
+        <div class="rule-section">
+            <h2>Use of School Property</h2>
+            <div class="details">
+                <p>Students must handle school property with care. Any damage caused intentionally or due to negligence will require compensation.</p>
+            </div>
+        </div>
+
+       
+
+        
+    </div>
+
+   
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="https://jdglobalschool.in/images/logo.jpeg" alt="Z.K. Office Solution Logo" class="logo">
+                <p>J.D global school english medium (A Co-Educational group of school)</p>
+            </div>
+
+
+
+            <!-- Follow Me Section -->
+            <div class="footer-follow">
+                <h3>OUR LINKS</h3>
+                <ul>
+                    <li><a href="#">HOME</a>
+
+                    </li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">GALLER</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+
+                </ul>
+
+            </div>
+            <!-- Location Section -->
+            <div class="footer-location">
+                <h3>Our Location</h3>
+                <p>226,Sai Enclave,nandgram, opp km Residency,Raj nagar Extn.,Ghaziabad 201003</p>
+                <p>Email: jdglobal.school@gmail.com</p>
+                <p>Phone: 0120-2981089,8882229658</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
